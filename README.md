@@ -31,7 +31,7 @@ The official binary distributions available at [studio.foxglove.dev](https://stu
 Foxglove Studio can be self-hosted using our [docker image](https://ghcr.io/foxglove/studio). Please note that this build does not contain any closed source functionality.
 
 ```sh
-docker run --rm -p "8080:8080" ghcr.io/foxglove/studio:latest
+docker run --rm -p "80:80" ghcr.io/tatsuyai713/sviz:latest
 ```
 
 Foxglove Studio will be accessible in your browser at [localhost:8080](http://localhost:8080/).
@@ -41,7 +41,7 @@ Foxglove Studio will be accessible in your browser at [localhost:8080](http://lo
 [Bind-mount](https://docs.docker.com/storage/bind-mounts/) a layout JSON file at `/foxglove/default-layout.json` to set the default layout used when loading Studio from the Docker image.
 
 ```sh
-docker run --rm -p "8080:8080" -v /path/to/custom_layout.json:/foxglove/default-layout.json ghcr.io/foxglove/studio:latest
+docker run --rm -p "80:80" -v /path/to/custom_layout.json:/foxglove/default-layout.json ghcr.io/tatsuyai713/sviz:latest
 ```
 
 ### Self-hosted extensions
